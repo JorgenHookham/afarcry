@@ -1,0 +1,24 @@
+{
+    "name": "afarcry",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "NODE_ENV=production harp server -p $PORT",
+        "dev": "harp server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JorgenHookham/afarcry.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JorgenHookham/afarcry/issues"
+    },
+    "homepage": "https://github.com/JorgenHookham/afarcry",
+    "dependencies": {
+        "harp": "^0.17.0"
+    }
+}
