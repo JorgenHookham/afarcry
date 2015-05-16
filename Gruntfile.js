@@ -1,4 +1,13 @@
 module.exports = function (grunt) {
-    // grunt.initConfig({});
-    // grunt.loadNpmTasks('grunt-modernizr');
+    grunt.initConfig({
+        imagemin: {
+            all: {
+                cwd: 'images/',
+                dest: 'images/',
+                expand: true,
+                src: ['**/*.{jpg,jpeg,png}']
+            }
+        }
+    });
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 };

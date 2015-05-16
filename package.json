@@ -22,6 +22,7 @@
     "harp": "^0.17.0"
   },
   "devDependencies": {
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "grunt-contrib-imagemin": "^0.9.4"
   }
 }
