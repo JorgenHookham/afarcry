@@ -1,0 +1,43 @@
+script.
+    (function (w) {
+        var doc = w.document;
+        var ref = doc.getElementsByTagName('script')[0];
+        window.load = function (src, type, callback) {
+            var el;
+            if (type == 'script') {
+                el = doc.createElement('script');
+                el.src = src;
+                if (!w.localStorage || !w.localStorage[src]) {
+                    el.async = 'true';
+                }
+            } else {
+                el = doc.createElement('link');
+                el.rel = 'stylesheet';
+                if (!w.localStorage || !w.localStorage[src]) {
+                    el.media = 'only foo';
+                }
+                el.href = src;
+            }
+
+            if (w.localStorage && !w.localStorage[src]) {
+                try {
+                    w.localStorage[src] = 'true';
+                } catch (e) {}
+            }
+
+            if (el.media) {
+                setTimeout(function () { el.media = 'all'; });
+            }
+
+            var done = false;
+            el.onload = el.onReadyStateChange = function () {
+                var readyState = this.readyState;
+                if (done || readyState && readyState != 'complete' && readyState != 'loaded') return;
+                done = true;
+                if (callback) callback();
+            };
+
+            ref.parentNode.insertBefore(el, ref);
+
+        };
+    })(this);

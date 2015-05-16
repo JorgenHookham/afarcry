@@ -1,0 +1,96 @@
+$small: 'screen and (max-width: 768px)';
+$medium: 'screen and (min-width: 769px) and (max-width: 1024px)';
+$large: 'screen and (min-width: 1025px)';
+
+$washed-fire: #FFF3E6;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $washed-fire;
+    font-family: 'helvetica nueue', 'helvetica', 'sans-serif';
+}
+
+header.title {
+    overflow: hidden;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+    text-align: center;
+
+    @media #{$small} {
+        max-height: 568px;
+        background-image: url(images/title-photo-small.jpg);
+    }
+    @media #{$medium} {
+        max-height: 1024px;
+        background-image: url(images/title-photo-medium.jpg);
+    }
+    @media #{$large} {
+        max-height: 900px;
+        background-image: url(images/title-photo-large.jpg);
+    }
+
+    .cssvhunit & {
+        height: 100vh;
+    }
+
+    .flexbox & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-text {
+        text-align: center;
+        text-shadow: 0 0 8px rgba(#996C5C, .5);
+        .fout & { display: none }
+    }
+
+    .title-heading {
+        margin: .5em 0 0;
+
+        font-family: 'franklin-gothic-urw-comp';
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @media #{$small} { font-size: 4rem; }
+        @media #{$medium} { font-size: 6rem; }
+        @media #{$large} { font-size: 8rem; }
+    }
+
+    .title-subhead {
+        margin: 0 0 1em;
+
+        font-family: 'franklin-gothic-urw-comp';
+        font-style: italic;
+        font-weight: 400;
+
+        @media #{$small} { font-size: 2rem; }
+        @media #{$medium} { font-size: 3rem; }
+        @media #{$large} { font-size: 4rem; }
+    }
+
+    .title-play {
+        display: block;
+        margin: 0 auto;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media #{$small} {
+            width: 80px; height: 80px;
+            background-image: url(images/play-small.png);
+        }
+        @media #{$medium} {
+            width: 92px; height: 92px;
+            background-image: url(images/play-medium.png);
+        }
+        @media #{$large} {
+            width: 104px; height: 104px;
+            background-image: url(images/play-large.png);
+        }
+    }
+}

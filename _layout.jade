@@ -1,6 +1,14 @@
 doctype
 html
-  head
-    link(rel="stylesheet" href="/main.css")
-  body
-    != yield
+    head
+        script(src="/lib/modernizr.js")
+        link(rel="stylesheet" href="/main.css")
+    body(class="fout")
+        != yield
+        != partial("_script_loader")
+        script.
+            load('//use.typekit.net/zhw7wub.js', 'script', function () {
+                Typekit.load({
+                    active: function () {document.querySelector('body').className = ''}
+                });
+            });
