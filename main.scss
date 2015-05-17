@@ -3,12 +3,25 @@ $medium: 'screen and (min-width: 769px) and (max-width: 1024px)';
 $large: 'screen and (min-width: 1025px)';
 
 $washed-fire: #FFF3E6;
+$warm-metal: #70533F;
+
+$font-stack: 'franklin-gothic-urw', 'helvetica neue', 'helvetica', 'sans-serif';
+$font-stack-condensed: 'franklin-gothic-urw-comp', 'helvetica neue', 'helvetica', 'sans-serif';
 
 body {
     margin: 0;
     padding: 0;
     background-color: $washed-fire;
-    font-family: 'helvetica nueue', 'helvetica', 'sans-serif';
+    color: $warm-metal;
+    font-family: $font-stack;
+}
+
+a, a:visited, a:link {
+    color: #FFD152;
+}
+
+a:hover {
+    color: #FFAE52;
 }
 
 header.title {
@@ -52,7 +65,7 @@ header.title {
     .title-heading {
         margin: .5em 0 0;
 
-        font-family: 'franklin-gothic-urw-comp';
+        font-family: $font-stack-condensed;
         font-weight: 700;
         text-transform: uppercase;
 
@@ -62,15 +75,19 @@ header.title {
     }
 
     .title-subhead {
-        margin: 0 0 1em;
+        max-width: 600px;
+        margin: 0 auto 1em;
+        padding: 0 1rem;
 
-        font-family: 'franklin-gothic-urw-comp';
+        font-family: $font-stack-condensed;
         font-style: italic;
         font-weight: 400;
 
-        @media #{$small} { font-size: 2rem; }
-        @media #{$medium} { font-size: 3rem; }
-        @media #{$large} { font-size: 4rem; }
+        @media #{$small} { font-size: 1.5rem; }
+        @media #{$medium} { font-size: 1.75rem; }
+        @media #{$large} { font-size: 2rem; }
+
+        > em { font-style: normal; }
     }
 
     .title-play {
@@ -93,4 +110,115 @@ header.title {
             background-image: url(images/play-large.png);
         }
     }
+}
+
+.page-section {
+    padding: 4rem 1rem;
+
+    &.white {
+        background-color: white;
+    }
+}
+
+.quoteblock {
+    background-color: white;
+    border-bottom: 1px solid #FFD152;
+    color: #444;
+    font-weight: 300;
+    text-align: center;
+
+    > blockquote {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .big-quote {
+        margin-bottom: 2rem;
+
+        @media #{$small} { font-size: 1.25rem; }
+        @media #{$medium} { font-size: 1.5rem; }
+        @media #{$large} { font-size: 1.75rem; }
+    }
+    .small-quote {
+        @media #{$small} { font-size: 1.25rem; }
+        @media #{$medium} { font-size: 1.25rem; }
+        @media #{$large} { font-size: 1.5rem; }
+    }
+}
+
+.petition {
+
+    .petition-title {
+        text-align: center;
+
+        .petition-subhead {
+            margin: 0;
+            font-weight: 400;
+
+            @media #{$small} { font-size: 1rem; }
+            @media #{$medium} { font-size: 1.25rem; }
+            @media #{$large} { font-size: 1.25rem; }
+        }
+
+        .petition-headline {
+            margin-top: .32rem;
+            font-family: $font-stack-condensed;
+            text-transform: uppercase;
+
+            @media #{$small} { font-size: 2rem; }
+            @media #{$medium} { font-size: 3rem; }
+            @media #{$large} { font-size: 4rem; }
+        }
+    }
+
+    blockquote {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .petition-email {
+        position: relative;
+        max-width: 440px;
+        margin: 4rem auto 0;
+
+        .petition-email-input {
+            box-sizing: border-box;
+            width: 100%; height: 48px;
+            padding-left: 1rem; padding-right: 80px;
+            border: none;
+            box-shadow: 0 0 4px rgba(#FFD152, .32);
+
+            color: $warm-metal;
+            font-size: 1rem;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 12px #FFD152;
+            }
+
+            &::placeholder {
+                color: #FFE499;
+            }
+        }
+
+        .petition-email-submit {
+            position: absolute;
+            top: 0; right: -3px; bottom: 0;
+            width: 80px;
+            background: #FFD152;
+            border: none;
+            border-radius: 0;
+            color: white;
+            font-family: $font-stack-condensed;
+            font-size: 1.5rem;
+            line-height: 0;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.footer {
+    font-size: 1.25rem;
+    text-align: center;
 }
