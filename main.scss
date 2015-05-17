@@ -5,7 +5,7 @@ $large: 'screen and (min-width: 1025px)';
 $washed-fire: #FFF3E6;
 $warm-metal: #70533F;
 $orange: #FFAE52;
-$orange-light: #FFD152;
+$orange-dark: #FF8533;
 
 $font-stack: 'franklin-gothic-urw', 'helvetica neue', 'helvetica', 'sans-serif';
 $font-stack-condensed: 'franklin-gothic-urw-comp', 'helvetica neue', 'helvetica', 'sans-serif';
@@ -23,7 +23,7 @@ a, a:visited, a:link {
 }
 
 a:hover {
-    color: $orange-light;
+    color: $orange-dark;
 }
 
 header.title {
@@ -200,7 +200,7 @@ header.title {
             }
 
             &::placeholder {
-                color: #FFE499;
+                color: $orange;
             }
         }
 
@@ -216,6 +216,11 @@ header.title {
             font-size: 1.5rem;
             line-height: 0;
             text-transform: uppercase;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $orange-dark;
+            }
         }
     }
 }
