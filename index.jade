@@ -2,7 +2,8 @@ header(class="title")
     hgroup(class="title-text")
         h1(class="title-heading") A Far Cry
         h2(class="title-subhead") A Song in Support of The White Helmets by Canadian Songwriter and Emergency Responder <em>Paul Hookham</em>
-        a(href="#" class="title-play")
+        audio(src="/track-sample.mp3" class="js-sample-track")
+        a(href="#" class="title-play js-play-sample-track")
 section(class="page-section quoteblock")
     blockquote(class="big-quote") The Syrian white helmets risk their lives to save another, while barrel-bombs drop from helicopters above.
     blockquote(class="big-quote") As a firefighter for 27 years, I can’t imagine someone trying to annihilate everyone at the scene.
@@ -24,3 +25,7 @@ section(class="page-section footer")
         a(href="http://www.whitehelmets.org") Learn more about the White Helmets
     p
         a(href="mailto:paul@hookham.co") Get in touch with the artist
+script.
+    document.querySelector('.js-play-sample-track').onclick = function () {
+        document.querySelector('.js-sample-track').play()
+    }
