@@ -141,10 +141,24 @@ header.title {
         @media #{$medium} { font-size: 1.5rem; }
         @media #{$large} { font-size: 1.75rem; }
     }
+
     .small-quote {
         @media #{$small} { font-size: 1.25rem; }
         @media #{$medium} { font-size: 1.25rem; }
         @media #{$large} { font-size: 1.5rem; }
+    }
+
+    cite {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $orange;
+        font-weight: 300;
+
+        > img {
+            width: 40px;
+            margin-right: 1rem;
+        }
     }
 }
 
