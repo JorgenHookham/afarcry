@@ -78,7 +78,7 @@ header.title {
 
     .title-subhead {
         max-width: 600px;
-        margin: 0 auto 1em;
+        margin: 0 auto .68em;
         padding: 0 1rem;
 
         font-family: $font-stack-condensed;
@@ -112,6 +112,10 @@ header.title {
             background-image: url(images/play-large.png);
         }
     }
+
+    .title-credits {
+        margin: 0 0 1.32em;
+    }
 }
 
 .page-section {
@@ -123,6 +127,7 @@ header.title {
 }
 
 .quoteblock {
+    padding: 6.8rem 1rem;
     background-color: white;
     box-shadow: 0 8px 16px rgba($orange, .16);
     color: #444;
@@ -135,7 +140,7 @@ header.title {
     }
 
     .big-quote {
-        margin-bottom: 2rem;
+        margin: 0 auto;
 
         @media #{$small} { font-size: 1.25rem; }
         @media #{$medium} { font-size: 1.5rem; }
@@ -162,84 +167,16 @@ header.title {
     }
 }
 
-.petition {
-
-    .petition-title {
-        text-align: center;
-
-        .petition-subhead {
-            margin: 0;
-            font-weight: 400;
-
-            @media #{$small} { font-size: 1rem; }
-            @media #{$medium} { font-size: 1.25rem; }
-            @media #{$large} { font-size: 1.25rem; }
-        }
-
-        .petition-headline {
-            margin-top: .32rem;
-            font-family: $font-stack-condensed;
-            text-transform: uppercase;
-
-            @media #{$small} { font-size: 2rem; }
-            @media #{$medium} { font-size: 3rem; }
-            @media #{$large} { font-size: 4rem; }
-        }
-    }
-
-    blockquote {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 0;
-    }
-
-    .petition-email {
-        position: relative;
-        max-width: 440px;
-        margin: 4rem auto 0;
-
-        .petition-email-input {
-            box-sizing: border-box;
-            width: 100%; height: 48px;
-            padding-left: 1rem; padding-right: 80px;
-            border: none;
-            box-shadow: 0 0 4px rgba($orange, .32);
-
-            color: $warm-metal;
-            font-size: 1rem;
-
-            &:focus {
-                outline: none;
-                box-shadow: 0 0 12px $orange;
-            }
-
-            &::placeholder {
-                color: $orange;
-            }
-        }
-
-        .petition-email-submit {
-            position: absolute;
-            top: 0; right: -3px; bottom: 0;
-            width: 80px;
-            background: $orange;
-            border: none;
-            border-radius: 0;
-            color: white;
-            font-family: $font-stack-condensed;
-            font-size: 1.5rem;
-            line-height: 0;
-            text-transform: uppercase;
-
-            &:hover {
-                cursor: pointer;
-                background-color: $orange-dark;
-            }
-        }
-    }
-}
-
 .footer {
     font-size: 1.25rem;
     text-align: center;
+
+    .footer-heading {
+        margin-top: .32rem;
+        text-align: center;
+
+        @media #{$small} { font-size: 1.32rem; }
+        @media #{$medium} { font-size: 1.68rem; }
+        @media #{$large} { font-size: 2.4rem; }
+    }
 }

@@ -1,31 +1,28 @@
 header(class="title")
     hgroup(class="title-text")
         h1(class="title-heading") A Far Cry
-        h2(class="title-subhead") A Song in Support of The White Helmets by Canadian Songwriter and Emergency Responder <em>Paul Hookham</em>
+        h2(class="title-subhead") A song in support of the White Helmets by Canadian Songwriter and Emergency Responder <em>Paul Hookham</em>
+        p(class="title-credits") <em>Vocals: Marlon O'Reilly</em>
         audio(src="/track-sample.mp3" class="js-sample-track")
         a(href="#" class="title-play js-play-sample-track")
 section(class="page-section quoteblock")
-    blockquote(class="big-quote") The Syrian white helmets risk their lives to save others, while barrel-bombs drop from helicopters above.
-    blockquote(class="big-quote") As a firefighter for 27 years, I can’t imagine someone trying to annihilate everyone at the scene.
-    cite
-        img(src="/images/quote.png" class="quoteblock-img")
-        span Paul Hookham, Songwriter and Retired Firefighter
-section(class="page-section petition")
-    hgroup(class="petition-title")
-        h4(class="petition-subhead") Sign the Petition, Get the Song For Free
-        h2(class="petition-headline") It's Time to Stop the Bombs
-    blockquote
-        p <strong>To the UN Security Council</strong> <br> <br> Barrel bombs - sometimes filled with chlorine - are the biggest killer of civilians in Syria today. Our unarmed and neutral rescue workers have saved more than 12,000 people from the attacks in Syria, but there are many we cannot reach. There are children trapped in rubble we cannot hear. For them, the UN Security Council must follow through on its demand made a year ago to stop the barrel bombs by introducing a 'no-fly zone' if necessary.
-        cite — Raed Saleh, head of the White Helmets, the Syrian Civil Defence.
-    form(class="petition-email")
-        input(type="email" placeholder="Your email address" class="petition-email-input")
-        input(type="submit" value="Sign" class="petition-email-submit")
+    blockquote(class="big-quote") The Syrian people and the White Helmets risk losing their lives to barrel bombs being dropped by government helicopters.
 section(class="page-section footer")
+    h2(class="footer-heading") Sign the Petition, Get the Song For Free
     p
-        a(href="http://www.whitehelmets.org") Learn more about the White Helmets
+        a(href="http://www.whitehelmets.org") Sign the petition
+    p
+        a(href="/track.mp3") Download <em>A Far Cry</em>
     p
         a(href="mailto:paul@hookham.co") Get in touch with the artist
 script.
     document.querySelector('.js-play-sample-track').onclick = function () {
-        document.querySelector('.js-sample-track').play()
+        var track = document.querySelector('.js-sample-track');
+        if (track.classList.contains('playing')) {
+            track.pause();
+            track.classList.remove('playing');
+        } else {
+            track.play();
+            track.classList.add('playing');
+        }
     }

@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"font-stack",
+				"font-stack-condensed"
+			],
+			[
 				"Http",
 				"HttpResponseRedirect"
 			],
@@ -391,14 +395,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 627,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -407,10 +403,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "blame",
+		"height": 237.0,
+		"last_filter": "install",
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"blame",
 				"Git: Blame"
@@ -422,10 +422,6 @@
 			[
 				"histo",
 				"Git: Commit history"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"gitblame",
@@ -481,10 +477,20 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/Jorgen/Projects/afarcry"
+		"/Users/Jorgen/Projects/afarcry",
+		"/Users/Jorgen/Projects/afarcry/images"
 	],
 	"file_history":
 	[
+		"/Users/Jorgen/Projects/afarcry/main.scss",
+		"/Users/Jorgen/Projects/afarcry/package.json",
+		"/Users/Jorgen/Projects/afarcry/index.jade",
+		"/Users/Jorgen/Projects/afarcry/_layout.jade",
+		"/Users/Jorgen/Projects/afarcry/_script_loader.jade",
+		"/Users/Jorgen/Projects/afarcry/Gruntfile.js",
+		"/Users/Jorgen/Projects/afarcry/afarcry.sublime-project",
+		"/Users/Jorgen/Projects/afarcry/.gitignore",
+		"/Users/Jorgen/Projects/afarcry/lib/modernizr.js",
 		"/Users/Jorgen/Projects/sokanu/sokanu/views.py",
 		"/Users/Jorgen/Projects/sokanu/reports/templates/reports/email/career_reports.txt",
 		"/Users/Jorgen/Projects/sokanu/reports/templates/reports/email/career_reports.html",
@@ -603,16 +609,7 @@
 		"/Users/Jorgen/Projects/sokanu/members/static/members/development/styles/history.scss",
 		"/Users/Jorgen/Projects/sokanu/static/development/styles/components/_panels.scss",
 		"/Users/Jorgen/Projects/sokanu/static/development/styles/components/_spacing.scss",
-		"/Users/Jorgen/Projects/sokanu/static/development/styles/components/_typeahead.scss",
-		"/Users/Jorgen/Projects/sokanu/static/development/styles/components/_panel.scss",
-		"/Users/Jorgen/Projects/sokanu/careers/templates/careers/list-pjax.html",
-		"/Users/Jorgen/Projects/sokanu/member_dashboard/templates/member_dashboard/sections/reports.html",
-		"/Users/Jorgen/Projects/sokanu/static/development/styles/components/_assessment-lists.scss",
-		"/Users/Jorgen/Projects/sokanu/reports/static/reports/development/scripts/circle-progress.js",
-		"/Users/Jorgen/Projects/sokanu/reports/templatetags/scale_report_breadcrumb_link.py",
-		"/Users/Jorgen/Projects/sokanu/sokanu/utils.py",
-		"/Users/Jorgen/Projects/sokanu/member_careers/models.py",
-		"/Users/Jorgen/Projects/sokanu/reports/templates/reports/base.html"
+		"/Users/Jorgen/Projects/sokanu/static/development/styles/components/_typeahead.scss"
 	],
 	"find":
 	{
@@ -758,6 +755,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$orange-light",
+			"#FFD152",
+			"color: #",
+			"#",
+			"'franklin-gothic-urw-comp'",
+			"subhead",
+			"} { ",
+			"jpg",
+			"92",
+			"104px",
+			"title-photo",
+			"} { ",
+			"1024",
 			"mixpanel",
 			"request.get",
 			"free_reports",
@@ -872,20 +882,7 @@
 			"external/{non-critical,critical}",
 			"assessment began",
 			"assessment begn",
-			"global.css",
-			"global/non-critical",
-			"global/global",
-			"fi-lock",
-			"lock",
-			"personality_report",
-			"assessment_",
-			"remote: ",
-			"h2",
-			"page section",
-			"extra_js",
-			"traits",
-			"import.*settings",
-			"interest"
+			"global.css"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -945,39 +942,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 627,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								201,
-								201
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1033,6 +999,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"modern",
+				"lib/modernizr.js"
+			],
 			[
 				"careerbase",
 				"careers/templates/careers/career_base.html"
@@ -1536,14 +1510,6 @@
 			[
 				"assdef",
 				"assessments/templates/assessments/default.html"
-			],
-			[
-				"assessmentscss",
-				"assessments/static/assessments/development/styles/assessments.scss"
-			],
-			[
-				"itemset",
-				"assessments/static/assessments/development/scripts/templates/itemset.html"
 			]
 		],
 		"width": 0.0
